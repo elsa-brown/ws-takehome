@@ -18310,7 +18310,7 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Arial', sans-serif; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\n.header {\n  height: 8rem;\n  text-align: center;\n  padding-top: 10px; }\n  .header img {\n    width: 247px;\n    height: 110px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #30363a;\n  color: white;\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  font-weight: bolder;\n  letter-spacing: 0.1rem; }\n\n.nav-item {\n  padding: 6px; }\n  .nav-item h6 {\n    white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white; }\n\n.footer {\n  height: 2rem;\n  background-color: #E5E5E5;\n  border-top: 1px solid black;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #30363a; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Arial', sans-serif; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nul {\n  list-style: none; }\n\n.header {\n  height: 8rem;\n  text-align: center;\n  padding-top: 10px; }\n  .header img {\n    width: 247px;\n    height: 110px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #30363a;\n  color: white;\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  font-weight: bolder;\n  letter-spacing: 0.1rem; }\n\n.nav-item {\n  padding: 6px; }\n  .nav-item h6 {\n    white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white; }\n\n.subnav {\n  display: flex;\n  padding-left: 2px;\n  font-family: 'Trebuchet MS';\n  font-size: 0.7rem;\n  letter-spacing: 0.02rem;\n  color: gray; }\n  .subnav li {\n    padding: 4px; }\n  .subnav #selected-product {\n    font-weight: bold;\n    color: #30363a; }\n\n.product-image-container {\n  float: left; }\n\n.product-description-container {\n  float: right; }\n\n.footer {\n  height: 2rem;\n  background-color: #F1F1F1;\n  border-top: 1px solid #30363a;\n  position: fixed;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #30363a;\n  font-family: 'Trebuchet MS', serif; }\n", ""]);
 
 // exports
 
@@ -18937,9 +18937,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var SubNav = function SubNav() {
 	return _react2.default.createElement(
-		'div',
-		null,
-		'SubNav'
+		"ul",
+		{ className: "subnav" },
+		_react2.default.createElement(
+			"li",
+			null,
+			"Home"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Homekeeping"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Aprons"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Adult Aprons"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			{ id: "selected-product" },
+			"Williams-Sonoma Classic Apron"
+		)
 	);
 };
 
@@ -18960,13 +19004,27 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ProductImage = __webpack_require__(39);
+
+var _ProductImage2 = _interopRequireDefault(_ProductImage);
+
+var _ProductDescription = __webpack_require__(38);
+
+var _ProductDescription2 = _interopRequireDefault(_ProductDescription);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductContainer = function ProductContainer() {
 	return _react2.default.createElement(
 		'div',
-		null,
-		'ProductContainer'
+		{ className: 'product-container col-sm-12' },
+		_react2.default.createElement(
+			'div',
+			null,
+			'ProductContainer'
+		),
+		_react2.default.createElement(_ProductImage2.default, null),
+		_react2.default.createElement(_ProductDescription2.default, null)
 	);
 };
 
@@ -18998,6 +19056,103 @@ var Footer = function Footer() {
 };
 
 exports.default = Footer;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProductDescription = function ProductDescription() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "product-description-container col-sm-4" },
+		_react2.default.createElement(
+			"h4",
+			null,
+			"Williams-Sonoma Classic Apron, French Blue"
+		),
+		_react2.default.createElement(
+			"p",
+			null,
+			"A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of colors. An apron of this quality makes a welcome gift for any cook."
+		),
+		_react2.default.createElement(
+			"ul",
+			null,
+			_react2.default.createElement(
+				"li",
+				null,
+				"Durable 100% cotton construction."
+			),
+			_react2.default.createElement(
+				"li",
+				null,
+				"Adjustable neckband ensures a good fit."
+			),
+			_react2.default.createElement(
+				"li",
+				null,
+				"Roomy front pockets hold small tools."
+			),
+			_react2.default.createElement(
+				"li",
+				null,
+				"Machine-wash."
+			)
+		),
+		_react2.default.createElement(
+			"h3",
+			null,
+			"$19.95"
+		),
+		_react2.default.createElement(
+			"div",
+			{ className: "qty-select" },
+			"Select"
+		)
+	);
+};
+
+exports.default = ProductDescription;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProductImage = function ProductImage() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "product-image-container col-sm-8" },
+		"Images"
+	);
+};
+
+exports.default = ProductImage;
 
 /***/ })
 /******/ ]);
