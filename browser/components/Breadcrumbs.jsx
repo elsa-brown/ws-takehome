@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SubNav = () => {
+const Breadcrumbs = (props) => {
 	return (
-		<ul className="subnav">
+		<ul className="breadcrumbs">
 			<li>Home</li>
 			<li>></li>
 			<li>Homekeeping</li>
@@ -11,9 +11,9 @@ const SubNav = () => {
 			<li>></li>
 			<li>Adult Aprons</li>
 			<li>></li>
-			<li id="selected-product">Williams-Sonoma Classic Apron</li>
+			<li id="selected-product">Williams-Sonoma Classic Apron, {props.color}</li>
 		</ul>
 	)
 }
 
-export default SubNav;
+export default Breadcrumbs;

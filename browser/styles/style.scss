@@ -3,7 +3,24 @@
 @import 'colors';
 
 body {
-	font-family: 'Arial', sans-serif;
+	font-family: 'Trebuchet MS';
+}
+
+h3 {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 1.25rem;
+	color: $near-black;
+}
+
+h4 {
+	font-family: 'Georgia', serif;
+	color: $near-black;
+	font-size: 1.15rem;
+	font-weight: 500;
+	letter-spacing: -0.01rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 
 h6 {
@@ -15,15 +32,16 @@ ul {
 	list-style: none;
 }
 
+#page {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 .header {
-	height: 8rem;
+	height: 6rem;
 	text-align: center;
 	padding-top: 10px;
-
-	img {
-		width: 247px;
-		height: 110px;
-	}
+	padding-bottom: 30px;
 }
 
 .nav-container {
@@ -33,16 +51,16 @@ ul {
 	width: 100%;
 	background-color: $near-black;
 	color: white;
+	font-family: 'Arial', sans-serif;
 	text-transform: uppercase;
-	font-size: 0.75rem;
-  font-weight: bolder;
-  letter-spacing: 0.1rem;
+	font-size: 0.65rem;
+  font-weight: lighter;
+  letter-spacing: 0.08rem;
+  padding-left: 10px;
 }
 
 .nav-item {
-	padding: 6px;
-
-	h6 {
+	p {
 		white-space: nowrap;
 	}
 }
@@ -50,39 +68,101 @@ ul {
 #nav-ws-home {
 	background-color: $navy;
 	border-left: 1px solid white;
+	padding-right: 6px;
+	padding-left: 6px;
 }
 
-.subnav {
+.breadcrumbs {
 	display: flex;
 	padding-left: 2px;
+	padding-bottom: 2px;
 	font-family: 'Trebuchet MS';
 	font-size: 0.7rem;
-	letter-spacing: 0.02rem;
-	color: gray;
+	color: $medium-gray;
 
 	li {
 		padding: 4px;
 	}
 
 	#selected-product {
-		font-weight: bold;
 		color: $near-black;
 	}
 }
 
+.body-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.product-container {
+	padding-bottom: 40px;
+	display: flex;
+}
+
 .product-image-container {
-	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero {
+	max-width: 439px;
+
+}
+
+.image-menu {
+	display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  padding-left: 50px;
+}
+
+.image-sm-container {
+	width: 90px;
+	height: 90px;
+	padding: 2px;
+	border: 2px solid white;
+	border-radius: 2px;
+
+	img {
+		max-height: 90px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		border: 2px solid black;
+	}
 }
 
 .product-description-container {
 	float: right;
+	font-size: 0.8rem;
+	color: $dark-gray;
+	line-height: 1.15rem;
+	padding-right: 20px;
+
+	ul {
+		list-style-type: disc;
+	}
+}
+
+.add-to-cart {
+	max-width: 150px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.expand-collapse-container {
+	border-top: 1px solid $near-black;
+	border-bottom: 1px solid $near-black;
 }
 
 .footer {
 	height: 2rem;
 	background-color: $light-gray;
 	border-top: 1px solid $near-black;
-	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;

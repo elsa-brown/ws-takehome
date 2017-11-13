@@ -30,8 +30,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg|ttf|woff|woff2|eof|eot)$/,
-        loader: 'file-loader'
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader?name=/dist/assets/[name].[ext]'
       }
     ]
   }

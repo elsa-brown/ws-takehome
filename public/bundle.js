@@ -65,6 +65,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -254,7 +269,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -294,21 +309,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -429,7 +429,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 5 */
@@ -489,7 +489,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 6 */
@@ -506,7 +506,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -558,7 +558,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 7 */
@@ -625,7 +625,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 8 */
@@ -682,7 +682,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -745,7 +745,7 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 10 */
@@ -940,7 +940,7 @@ module.exports = focusNode;
 "use strict";
 
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -969,7 +969,7 @@ _reactDom2.default.render(_react2.default.createElement(_Page2.default, null), d
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1);
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2);
 function q(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var r={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function t(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}t.prototype.isReactComponent={};t.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?q("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};t.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function u(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}function v(){}v.prototype=t.prototype;var w=u.prototype=new v;w.constructor=u;m(w,t.prototype);w.isPureReactComponent=!0;function x(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}var y=x.prototype=new v;y.constructor=x;m(y,t.prototype);y.unstable_isAsyncReactComponent=!0;y.render=function(){return this.props.children};
@@ -1009,7 +1009,7 @@ var _assign = __webpack_require__(3);
 var invariant = __webpack_require__(5);
 var emptyObject = __webpack_require__(4);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -2334,7 +2334,7 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 17 */
@@ -2399,7 +2399,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(22);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 19 */
@@ -2417,7 +2417,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),m=__webpack_require__(8),A=__webpack_require__(3),B=__webpack_require__(1),ca=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),ha=__webpack_require__(12),ia=__webpack_require__(13),C=__webpack_require__(4);
+var aa=__webpack_require__(0),m=__webpack_require__(8),A=__webpack_require__(3),B=__webpack_require__(2),ca=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),ha=__webpack_require__(12),ia=__webpack_require__(13),C=__webpack_require__(4);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:D("227");
 var la={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function qa(a,b){return(a&b)===b}
 var ra={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ra,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){sa.hasOwnProperty(f)?D("48",f):void 0;var g=f.toLowerCase(),k=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:qa(k,b.MUST_USE_PROPERTY),
@@ -2711,12 +2711,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(0);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
-var emptyFunction$1 = __webpack_require__(1);
+var emptyFunction$1 = __webpack_require__(2);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
@@ -18055,7 +18055,7 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 23 */
@@ -18224,47 +18224,47 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _NavBar = __webpack_require__(34);
+var _NavBar = __webpack_require__(28);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
-var _SubNav = __webpack_require__(35);
-
-var _SubNav2 = _interopRequireDefault(_SubNav);
-
-var _ProductContainer = __webpack_require__(36);
+var _ProductContainer = __webpack_require__(30);
 
 var _ProductContainer2 = _interopRequireDefault(_ProductContainer);
 
-var _Footer = __webpack_require__(37);
+var _Footer = __webpack_require__(38);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(28);
+__webpack_require__(39);
 
-var _logo = __webpack_require__(33);
+var _logo = __webpack_require__(44);
 
 var _logo2 = _interopRequireDefault(_logo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//import Breadcrumbs from './Breadcrumbs';
 var Page = function Page() {
 	return _react2.default.createElement(
 		'div',
-		null,
+		{ id: 'page' },
 		_react2.default.createElement(
 			'div',
 			{ className: 'header' },
 			_react2.default.createElement('img', { src: _logo2.default })
 		),
 		_react2.default.createElement(_NavBar2.default, null),
-		_react2.default.createElement(_SubNav2.default, null),
-		_react2.default.createElement(_ProductContainer2.default, null),
-		_react2.default.createElement(_Footer2.default, null)
+		_react2.default.createElement(
+			'div',
+			{ className: 'body-wrapper' },
+			_react2.default.createElement(_ProductContainer2.default, null),
+			_react2.default.createElement(_Footer2.default, null)
+		)
 	);
 };
 
@@ -18274,10 +18274,479 @@ exports.default = Page;
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var links = ["Cookware", "Cook's Tools", "Cutlery", "Electrics", "Bakeware", "Food", "Tabletop & Bar", "Homekeeping", "Outdoor", "Sale"];
+
+var NavBar = function NavBar() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "nav-container" },
+		links.map(function (link, idx) {
+			return _react2.default.createElement(
+				"div",
+				{ key: idx, className: "nav-item" },
+				_react2.default.createElement(
+					"p",
+					null,
+					link
+				)
+			);
+		}),
+		_react2.default.createElement(
+			"div",
+			{ className: "nav-item", id: "nav-ws-home" },
+			_react2.default.createElement(
+				"p",
+				null,
+				"Williams-Sonoma Home"
+			)
+		)
+	);
+};
+
+exports.default = NavBar;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Breadcrumbs = function Breadcrumbs(props) {
+	return _react2.default.createElement(
+		"ul",
+		{ className: "breadcrumbs" },
+		_react2.default.createElement(
+			"li",
+			null,
+			"Home"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Homekeeping"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Aprons"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			"Adult Aprons"
+		),
+		_react2.default.createElement(
+			"li",
+			null,
+			">"
+		),
+		_react2.default.createElement(
+			"li",
+			{ id: "selected-product" },
+			"Williams-Sonoma Classic Apron, ",
+			props.color
+		)
+	);
+};
+
+exports.default = Breadcrumbs;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Breadcrumbs = __webpack_require__(29);
+
+var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
+
+var _ProductImage = __webpack_require__(31);
+
+var _ProductImage2 = _interopRequireDefault(_ProductImage);
+
+var _ProductDescription = __webpack_require__(35);
+
+var _ProductDescription2 = _interopRequireDefault(_ProductDescription);
+
+var _products = __webpack_require__(33);
+
+var _products2 = _interopRequireDefault(_products);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProductContainer = function (_Component) {
+	_inherits(ProductContainer, _Component);
+
+	function ProductContainer() {
+		_classCallCheck(this, ProductContainer);
+
+		var _this = _possibleConstructorReturn(this, (ProductContainer.__proto__ || Object.getPrototypeOf(ProductContainer)).call(this));
+
+		_this.state = {
+			color: 'French Blue',
+			hero: '/assets/product-large-a.jpg'
+		};
+
+		_this.handleClick = _this.handleClick.bind(_this);
+		return _this;
+	}
+
+	_createClass(ProductContainer, [{
+		key: 'handleClick',
+		value: function handleClick(evt) {
+			var selected = _products2.default[evt.target.name];
+			this.setState({ color: selected.color, hero: selected.hero });
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(_Breadcrumbs2.default, { color: this.state.color }),
+				_react2.default.createElement(
+					'div',
+					{ className: 'product-container col-sm-12' },
+					_react2.default.createElement(_ProductImage2.default, { hero: this.state.hero, onClick: this.handleClick }),
+					_react2.default.createElement(_ProductDescription2.default, { color: this.state.color })
+				)
+			);
+		}
+	}]);
+
+	return ProductContainer;
+}(_react.Component);
+
+exports.default = ProductContainer;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ImageMenu = __webpack_require__(32);
+
+var _ImageMenu2 = _interopRequireDefault(_ImageMenu);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import image from '../../public/assets/product-large-a.jpg';
+
+var ProductImage = function ProductImage(props) {
+	console.log('ProductImage props', props);
+	return _react2.default.createElement(
+		'div',
+		{ className: 'product-image-container col-sm-7' },
+		_react2.default.createElement(
+			'div',
+			{ className: 'hero-container' },
+			_react2.default.createElement('img', { src: props.hero, className: 'hero' })
+		),
+		_react2.default.createElement(_ImageMenu2.default, { onClick: props.onClick })
+	);
+};
+
+exports.default = ProductImage;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _products = __webpack_require__(33);
+
+var _products2 = _interopRequireDefault(_products);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ImageMenu = function ImageMenu(props) {
+	console.log('products', _products2.default);
+	return _react2.default.createElement(
+		'div',
+		{ className: 'image-menu' },
+		_products2.default.map(function (product, i) {
+			return _react2.default.createElement(
+				'div',
+				{ key: i, className: 'image-sm-container', onClick: props.onClick },
+				_react2.default.createElement('img', { src: product.thumbnail, name: i })
+			);
+		})
+	);
+};
+
+exports.default = ImageMenu;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var products = [{
+	color: 'French Blue',
+	hero: '/assets/product-large-a.jpg',
+	thumbnail: '/assets/product-small-a.jpg',
+	selector: 'french-blue'
+}, {
+	color: 'Black Stripe',
+	hero: '/assets/product-large-b.jpg',
+	thumbnail: '/assets/product-small-b.jpg',
+	selector: 'black-stripe'
+}, {
+	color: 'Green Stripe',
+	hero: '/assets/product-large-c.jpg',
+	thumbnail: '/assets/product-small-c.jpg',
+	selector: 'green-stripe'
+}, {
+	color: 'Red Stripe',
+	hero: '/assets/product-large-d.jpg',
+	thumbnail: '/assets/product-small-d.jpg',
+	selector: 'red-stripe'
+}];
+
+exports.default = products;
+
+/***/ }),
+/* 34 */,
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ExpandCollapseContainer = __webpack_require__(36);
+
+var _ExpandCollapseContainer2 = _interopRequireDefault(_ExpandCollapseContainer);
+
+var _buttonAddToCart = __webpack_require__(37);
+
+var _buttonAddToCart2 = _interopRequireDefault(_buttonAddToCart);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProductDescription = function ProductDescription(props) {
+	return _react2.default.createElement(
+		'div',
+		{ className: 'product-description-container col-sm-5' },
+		_react2.default.createElement(
+			'h4',
+			null,
+			'Williams-Sonoma Classic Apron, ',
+			props.color
+		),
+		_react2.default.createElement(
+			'p',
+			null,
+			'A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of colors. An apron of this quality makes a welcome gift for any cook.'
+		),
+		_react2.default.createElement(
+			'ul',
+			null,
+			_react2.default.createElement(
+				'li',
+				null,
+				'Durable 100% cotton construction.'
+			),
+			_react2.default.createElement(
+				'li',
+				null,
+				'Adjustable neckband ensures a good fit.'
+			),
+			_react2.default.createElement(
+				'li',
+				null,
+				'Roomy front pockets hold small tools.'
+			),
+			_react2.default.createElement(
+				'li',
+				null,
+				'Machine-wash.'
+			)
+		),
+		_react2.default.createElement(
+			'h3',
+			null,
+			'$19.95'
+		),
+		_react2.default.createElement(
+			'p',
+			null,
+			_react2.default.createElement('input', { id: 'spinner', name: 'value' }),
+			_react2.default.createElement(
+				'button',
+				null,
+				'+'
+			),
+			_react2.default.createElement(
+				'button',
+				null,
+				'-'
+			)
+		),
+		_react2.default.createElement('img', { className: 'add-to-cart', src: _buttonAddToCart2.default }),
+		_react2.default.createElement(_ExpandCollapseContainer2.default, null)
+	);
+};
+
+exports.default = ProductDescription;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ExpandCollapseContainer = function ExpandCollapseContainer() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "expand-collapse-container" },
+		"EXPANDED"
+	);
+};
+
+exports.default = ExpandCollapseContainer;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/dist/assets/button-add-to-cart.svg";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "footer" },
+		"\xA9 Williams-Sonoma Inc., All Rights Reserved | Terms and Conditions | Privacy Policy | Legal Statement"
+	);
+};
+
+exports.default = Footer;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(40);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18285,7 +18754,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(31)(content, options);
+var update = __webpack_require__(42)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -18302,21 +18771,21 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(30)(undefined);
+exports = module.exports = __webpack_require__(41)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Arial', sans-serif; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nul {\n  list-style: none; }\n\n.header {\n  height: 8rem;\n  text-align: center;\n  padding-top: 10px; }\n  .header img {\n    width: 247px;\n    height: 110px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #30363a;\n  color: white;\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  font-weight: bolder;\n  letter-spacing: 0.1rem; }\n\n.nav-item {\n  padding: 6px; }\n  .nav-item h6 {\n    white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white; }\n\n.subnav {\n  display: flex;\n  padding-left: 2px;\n  font-family: 'Trebuchet MS';\n  font-size: 0.7rem;\n  letter-spacing: 0.02rem;\n  color: gray; }\n  .subnav li {\n    padding: 4px; }\n  .subnav #selected-product {\n    font-weight: bold;\n    color: #30363a; }\n\n.product-image-container {\n  float: left; }\n\n.product-description-container {\n  float: right; }\n\n.footer {\n  height: 2rem;\n  background-color: #F1F1F1;\n  border-top: 1px solid #30363a;\n  position: fixed;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #30363a;\n  font-family: 'Trebuchet MS', serif; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Trebuchet MS'; }\n\nh3 {\n  font-family: sans-serif;\n  font-weight: normal;\n  font-size: 1.25rem;\n  color: #2e2e2e; }\n\nh4 {\n  font-family: 'Georgia', serif;\n  color: #2e2e2e;\n  font-size: 1.15rem;\n  font-weight: 500;\n  letter-spacing: -0.01rem;\n  margin-top: 0;\n  margin-bottom: 1rem; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nul {\n  list-style: none; }\n\n#page {\n  max-width: 1000px;\n  margin: 0 auto; }\n\n.header {\n  height: 6rem;\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 30px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #2e2e2e;\n  color: white;\n  font-family: 'Arial', sans-serif;\n  text-transform: uppercase;\n  font-size: 0.65rem;\n  font-weight: lighter;\n  letter-spacing: 0.08rem;\n  padding-left: 10px; }\n\n.nav-item p {\n  white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white;\n  padding-right: 6px;\n  padding-left: 6px; }\n\n.breadcrumbs {\n  display: flex;\n  padding-left: 2px;\n  padding-bottom: 2px;\n  font-family: 'Trebuchet MS';\n  font-size: 0.7rem;\n  color: #A8A8A8; }\n  .breadcrumbs li {\n    padding: 4px; }\n  .breadcrumbs #selected-product {\n    color: #2e2e2e; }\n\n.body-wrapper {\n  display: flex;\n  flex-direction: column; }\n\n.product-container {\n  padding-bottom: 40px;\n  display: flex; }\n\n.product-image-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.hero {\n  max-width: 439px; }\n\n.image-menu {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  align-self: flex-start;\n  padding-left: 50px; }\n\n.image-sm-container {\n  width: 90px;\n  height: 90px;\n  padding: 2px;\n  border: 2px solid white;\n  border-radius: 2px; }\n  .image-sm-container img {\n    max-height: 90px; }\n  .image-sm-container:hover {\n    cursor: pointer;\n    border: 2px solid black; }\n\n.product-description-container {\n  float: right;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n  line-height: 1.15rem;\n  padding-right: 20px; }\n  .product-description-container ul {\n    list-style-type: disc; }\n\n.add-to-cart {\n  max-width: 150px;\n  padding-top: 10px;\n  padding-bottom: 15px; }\n\n.expand-collapse-container {\n  border-top: 1px solid #2e2e2e;\n  border-bottom: 1px solid #2e2e2e; }\n\n.footer {\n  height: 2rem;\n  background-color: #F1F1F1;\n  border-top: 1px solid #2e2e2e;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #2e2e2e;\n  font-family: 'Trebuchet MS', serif; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 30 */
+/* 41 */
 /***/ (function(module, exports) {
 
 /*
@@ -18398,7 +18867,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 31 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -18454,7 +18923,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(32);
+var	fixUrls = __webpack_require__(43);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -18770,7 +19239,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 32 */
+/* 43 */
 /***/ (function(module, exports) {
 
 
@@ -18865,294 +19334,10 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 33 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "06c4aff8d360e6863fc40b0f9e05427f.png";
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var links = ["Cookware", "Cook's Tools", "Cutlery", "Electrics", "Bakeware", "Food", "Tabletop & Bar", "Homekeeping", "Outdoor", "Sale"];
-
-var NavBar = function NavBar() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "nav-container" },
-		links.map(function (link, idx) {
-			return _react2.default.createElement(
-				"div",
-				{ key: idx, className: "nav-item" },
-				_react2.default.createElement(
-					"h6",
-					null,
-					link
-				)
-			);
-		}),
-		_react2.default.createElement(
-			"div",
-			{ className: "nav-item", id: "nav-ws-home" },
-			_react2.default.createElement(
-				"h6",
-				null,
-				"Williams-Sonoma Home"
-			)
-		)
-	);
-};
-
-exports.default = NavBar;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SubNav = function SubNav() {
-	return _react2.default.createElement(
-		"ul",
-		{ className: "subnav" },
-		_react2.default.createElement(
-			"li",
-			null,
-			"Home"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			">"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			"Homekeeping"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			">"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			"Aprons"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			">"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			"Adult Aprons"
-		),
-		_react2.default.createElement(
-			"li",
-			null,
-			">"
-		),
-		_react2.default.createElement(
-			"li",
-			{ id: "selected-product" },
-			"Williams-Sonoma Classic Apron"
-		)
-	);
-};
-
-exports.default = SubNav;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ProductImage = __webpack_require__(39);
-
-var _ProductImage2 = _interopRequireDefault(_ProductImage);
-
-var _ProductDescription = __webpack_require__(38);
-
-var _ProductDescription2 = _interopRequireDefault(_ProductDescription);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ProductContainer = function ProductContainer() {
-	return _react2.default.createElement(
-		'div',
-		{ className: 'product-container col-sm-12' },
-		_react2.default.createElement(
-			'div',
-			null,
-			'ProductContainer'
-		),
-		_react2.default.createElement(_ProductImage2.default, null),
-		_react2.default.createElement(_ProductDescription2.default, null)
-	);
-};
-
-exports.default = ProductContainer;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Footer = function Footer() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "footer" },
-		"\xA9 Williams-Sonoma Inc., All Rights Reserved | Terms and Conditions | Privacy Policy | Legal Statement"
-	);
-};
-
-exports.default = Footer;
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ProductDescription = function ProductDescription() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "product-description-container col-sm-4" },
-		_react2.default.createElement(
-			"h4",
-			null,
-			"Williams-Sonoma Classic Apron, French Blue"
-		),
-		_react2.default.createElement(
-			"p",
-			null,
-			"A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of colors. An apron of this quality makes a welcome gift for any cook."
-		),
-		_react2.default.createElement(
-			"ul",
-			null,
-			_react2.default.createElement(
-				"li",
-				null,
-				"Durable 100% cotton construction."
-			),
-			_react2.default.createElement(
-				"li",
-				null,
-				"Adjustable neckband ensures a good fit."
-			),
-			_react2.default.createElement(
-				"li",
-				null,
-				"Roomy front pockets hold small tools."
-			),
-			_react2.default.createElement(
-				"li",
-				null,
-				"Machine-wash."
-			)
-		),
-		_react2.default.createElement(
-			"h3",
-			null,
-			"$19.95"
-		),
-		_react2.default.createElement(
-			"div",
-			{ className: "qty-select" },
-			"Select"
-		)
-	);
-};
-
-exports.default = ProductDescription;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ProductImage = function ProductImage() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "product-image-container col-sm-8" },
-		"Images"
-	);
-};
-
-exports.default = ProductImage;
+module.exports = __webpack_require__.p + "/dist/assets/logo.png";
 
 /***/ })
 /******/ ]);

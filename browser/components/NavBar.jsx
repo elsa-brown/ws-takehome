@@ -8,12 +8,12 @@ const NavBar = () => {
 				{links.map((link, idx) => {
 					return (
 						<div key={idx} className="nav-item">
-							<h6>{ link }</h6>
+							<p>{ link }</p>
 						</div>
 					)
 				})}
 			<div className="nav-item" id="nav-ws-home">
-				<h6>Williams-Sonoma Home</h6>
+				<p>Williams-Sonoma Home</p>
 			</div>
 		</div>
 	)

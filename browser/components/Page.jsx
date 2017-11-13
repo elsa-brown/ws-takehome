@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavBar from './NavBar';
-import SubNav from './SubNav';
+//import Breadcrumbs from './Breadcrumbs';
 import ProductContainer from './ProductContainer';
 import Footer from './Footer';
 
@@ -10,14 +10,15 @@ import logo from '../../public/assets/logo.png';
 
 const Page = () => {
 	return (
-		<div>
+		<div id="page">
 			<div className="header">
 				<img src={ logo } />
 			</div>
 			<NavBar />
-			<SubNav />
-			<ProductContainer />
-			<Footer />
+			<div className="body-wrapper">
+				<ProductContainer />
+				<Footer />
+			</div>
 		</div>
 	)
 }
