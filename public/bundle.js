@@ -18660,17 +18660,7 @@ var ProductDescription = function ProductDescription(props) {
 		_react2.default.createElement(
 			'p',
 			null,
-			_react2.default.createElement('input', { id: 'spinner', name: 'value' }),
-			_react2.default.createElement(
-				'button',
-				null,
-				'+'
-			),
-			_react2.default.createElement(
-				'button',
-				null,
-				'-'
-			)
+			_react2.default.createElement('input', { id: 'qty', type: 'number', placeholder: '1', min: '1', max: '99', defaultValue: '1' })
 		),
 		_react2.default.createElement('img', { className: 'add-to-cart', src: _buttonAddToCart2.default }),
 		_react2.default.createElement(_ExpandCollapseContainer2.default, null)
@@ -18690,19 +18680,70 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ExpandCollapseItem = __webpack_require__(45);
+
+var _ExpandCollapseItem2 = _interopRequireDefault(_ExpandCollapseItem);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ExpandCollapseContainer = function ExpandCollapseContainer() {
-	return _react2.default.createElement(
-		"div",
-		{ className: "expand-collapse-container" },
-		"EXPANDED"
-	);
-};
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ExpandCollapseContainer = function (_Component) {
+	_inherits(ExpandCollapseContainer, _Component);
+
+	function ExpandCollapseContainer() {
+		_classCallCheck(this, ExpandCollapseContainer);
+
+		var _this = _possibleConstructorReturn(this, (ExpandCollapseContainer.__proto__ || Object.getPrototypeOf(ExpandCollapseContainer)).call(this));
+
+		_this.state = {
+			first: false,
+			second: false,
+			third: false
+		};
+
+		_this.toggleItem = _this.toggleItem.bind(_this);
+		return _this;
+	}
+
+	_createClass(ExpandCollapseContainer, [{
+		key: 'toggleItem',
+		value: function toggleItem(evt) {
+			console.log('Toggled!', evt.target.parentNode.parentNode);
+			var id = evt.target.parentNode.parentNode.id;
+			var nextState = !this.state[id];
+			this.setState(_defineProperty({}, id, nextState));
+			console.log('this.state', this.state);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'expand-collapse-container' },
+				_react2.default.createElement(_ExpandCollapseItem2.default, { id: 'first', show: this.state.first, toggleItem: this.toggleItem }),
+				_react2.default.createElement('hr', null),
+				_react2.default.createElement(_ExpandCollapseItem2.default, { id: 'second', show: this.state.second, toggleItem: this.toggleItem }),
+				_react2.default.createElement('hr', null),
+				_react2.default.createElement(_ExpandCollapseItem2.default, { id: 'third', show: this.state.third, toggleItem: this.toggleItem })
+			);
+		}
+	}]);
+
+	return ExpandCollapseContainer;
+}(_react.Component);
 
 exports.default = ExpandCollapseContainer;
 
@@ -18779,7 +18820,7 @@ exports = module.exports = __webpack_require__(41)(undefined);
 
 
 // module
-exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Trebuchet MS'; }\n\nh3 {\n  font-family: sans-serif;\n  font-weight: normal;\n  font-size: 1.25rem;\n  color: #2e2e2e; }\n\nh4 {\n  font-family: 'Georgia', serif;\n  color: #2e2e2e;\n  font-size: 1.15rem;\n  font-weight: 500;\n  letter-spacing: -0.01rem;\n  margin-top: 0;\n  margin-bottom: 1rem; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nul {\n  list-style: none; }\n\n#page {\n  max-width: 1000px;\n  margin: 0 auto; }\n\n.header {\n  height: 6rem;\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 30px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #2e2e2e;\n  color: white;\n  font-family: 'Arial', sans-serif;\n  text-transform: uppercase;\n  font-size: 0.65rem;\n  font-weight: lighter;\n  letter-spacing: 0.08rem;\n  padding-left: 10px; }\n\n.nav-item p {\n  white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white;\n  padding-right: 6px;\n  padding-left: 6px; }\n\n.breadcrumbs {\n  display: flex;\n  padding-left: 2px;\n  padding-bottom: 2px;\n  font-family: 'Trebuchet MS';\n  font-size: 0.7rem;\n  color: #A8A8A8; }\n  .breadcrumbs li {\n    padding: 4px; }\n  .breadcrumbs #selected-product {\n    color: #2e2e2e; }\n\n.body-wrapper {\n  display: flex;\n  flex-direction: column; }\n\n.product-container {\n  padding-bottom: 40px;\n  display: flex; }\n\n.product-image-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.hero {\n  max-width: 439px; }\n\n.image-menu {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  align-self: flex-start;\n  padding-left: 50px; }\n\n.image-sm-container {\n  width: 90px;\n  height: 90px;\n  padding: 2px;\n  border: 2px solid white;\n  border-radius: 2px; }\n  .image-sm-container img {\n    max-height: 90px; }\n  .image-sm-container:hover {\n    cursor: pointer;\n    border: 2px solid black; }\n\n.product-description-container {\n  float: right;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n  line-height: 1.15rem;\n  padding-right: 20px; }\n  .product-description-container ul {\n    list-style-type: disc; }\n\n.add-to-cart {\n  max-width: 150px;\n  padding-top: 10px;\n  padding-bottom: 15px; }\n\n.expand-collapse-container {\n  border-top: 1px solid #2e2e2e;\n  border-bottom: 1px solid #2e2e2e; }\n\n.footer {\n  height: 2rem;\n  background-color: #F1F1F1;\n  border-top: 1px solid #2e2e2e;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #2e2e2e;\n  font-family: 'Trebuchet MS', serif; }\n", ""]);
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0; }\n\n/**\n * Add the correct display in IE 9-.\n */\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\nfigcaption,\nfigure,\nmain {\n  /* 1 */\n  display: block; }\n\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */ }\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit; }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder; }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000; }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\naudio,\nvideo {\n  display: inline-block; }\n\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none; }\n\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible; }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none; }\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */ }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\ndetails,\nmenu {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Scripting\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n */\ncanvas {\n  display: inline-block; }\n\n/**\n * Add the correct display in IE.\n */\ntemplate {\n  display: none; }\n\n/* Hidden\n   ========================================================================== */\n/**\n * Add the correct display in IE 10-.\n */\n[hidden] {\n  display: none; }\n\n@media only screen and (min-width: 300px) {\n  .col-mobile-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-mobile-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-mobile-3 {\n    float: left;\n    width: 25%; }\n  .col-mobile-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-mobile-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-mobile-6 {\n    float: left;\n    width: 50%; }\n  .col-mobile-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-mobile-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-mobile-9 {\n    float: left;\n    width: 75%; }\n  .col-mobile-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-mobile-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-mobile-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 620px) {\n  .col-xs-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-xs-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-xs-3 {\n    float: left;\n    width: 25%; }\n  .col-xs-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-xs-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-xs-6 {\n    float: left;\n    width: 50%; }\n  .col-xs-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-xs-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-xs-9 {\n    float: left;\n    width: 75%; }\n  .col-xs-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-xs-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-xs-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 768px) {\n  .col-sm-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-sm-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-sm-3 {\n    float: left;\n    width: 25%; }\n  .col-sm-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-sm-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-sm-6 {\n    float: left;\n    width: 50%; }\n  .col-sm-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-sm-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-sm-9 {\n    float: left;\n    width: 75%; }\n  .col-sm-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-sm-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-sm-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1000px) {\n  .col-md-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-md-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-md-3 {\n    float: left;\n    width: 25%; }\n  .col-md-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-md-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-md-6 {\n    float: left;\n    width: 50%; }\n  .col-md-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-md-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-md-9 {\n    float: left;\n    width: 75%; }\n  .col-md-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-md-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-md-12 {\n    float: left;\n    width: 100%; } }\n\n@media only screen and (min-width: 1200px) {\n  .col-lg-1 {\n    float: left;\n    width: 8.33333%; }\n  .col-lg-2 {\n    float: left;\n    width: 16.66667%; }\n  .col-lg-3 {\n    float: left;\n    width: 25%; }\n  .col-lg-4 {\n    float: left;\n    width: 33.33333%; }\n  .col-lg-5 {\n    float: left;\n    width: 41.66667%; }\n  .col-lg-6 {\n    float: left;\n    width: 50%; }\n  .col-lg-7 {\n    float: left;\n    width: 58.33333%; }\n  .col-lg-8 {\n    float: left;\n    width: 66.66667%; }\n  .col-lg-9 {\n    float: left;\n    width: 75%; }\n  .col-lg-10 {\n    float: left;\n    width: 83.33333%; }\n  .col-lg-11 {\n    float: left;\n    width: 91.66667%; }\n  .col-lg-12 {\n    float: left;\n    width: 100%; } }\n\nbody {\n  font-family: 'Trebuchet MS'; }\n\nh3 {\n  font-family: sans-serif;\n  font-weight: normal;\n  font-size: 1.25rem;\n  color: #2e2e2e; }\n\nh4 {\n  font-family: 'Georgia', serif;\n  color: #2e2e2e;\n  font-size: 1.15rem;\n  font-weight: 500;\n  letter-spacing: -0.01rem;\n  margin-top: 0;\n  margin-bottom: 1rem; }\n\nh6 {\n  margin-top: 0;\n  margin-bottom: 0; }\n\nul {\n  list-style: none; }\n\nhr {\n  opacity: 0.5; }\n\n#page {\n  max-width: 1000px;\n  margin: 0 auto; }\n\n.header {\n  height: 6rem;\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 30px; }\n\n.nav-container {\n  display: flex;\n  justify-content: space-between;\n  align-content: center;\n  width: 100%;\n  background-color: #2e2e2e;\n  color: white;\n  font-family: 'Arial', sans-serif;\n  text-transform: uppercase;\n  font-size: 0.65rem;\n  font-weight: lighter;\n  letter-spacing: 0.08rem;\n  padding-left: 10px; }\n\n.nav-item p {\n  white-space: nowrap; }\n\n#nav-ws-home {\n  background-color: #002c59;\n  border-left: 1px solid white;\n  padding-right: 6px;\n  padding-left: 6px; }\n\n.breadcrumbs {\n  display: flex;\n  padding-left: 2px;\n  padding-bottom: 2px;\n  font-family: 'Trebuchet MS';\n  font-size: 0.7rem;\n  color: #A8A8A8; }\n  .breadcrumbs li {\n    padding: 4px; }\n  .breadcrumbs #selected-product {\n    color: #2e2e2e; }\n\n.body-wrapper {\n  display: flex;\n  flex-direction: column; }\n\n.product-container {\n  padding-bottom: 40px;\n  display: flex; }\n\n.product-image-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.hero {\n  max-width: 439px; }\n\n.image-menu {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  align-self: flex-start;\n  padding-left: 50px; }\n\n.image-sm-container {\n  width: 90px;\n  height: 90px;\n  padding: 2px;\n  border: 2px solid white;\n  border-radius: 2px; }\n  .image-sm-container img {\n    max-height: 90px; }\n  .image-sm-container:hover {\n    cursor: pointer;\n    border: 2px solid black; }\n\n.product-description-container {\n  float: right;\n  font-size: 0.8rem;\n  color: #7a7a7a;\n  line-height: 1.15rem;\n  padding-right: 20px; }\n  .product-description-container ul {\n    list-style-type: disc; }\n\n#qty {\n  font-size: 1rem;\n  height: 30px;\n  padding-left: 10px;\n  padding-right: 10px;\n  text-align: center; }\n\n.add-to-cart {\n  max-width: 150px;\n  padding-top: 10px;\n  padding-bottom: 15px; }\n  .add-to-cart:hover {\n    cursor: pointer; }\n\n.expand-collapse-container {\n  border-top: 1px solid #2e2e2e;\n  border-bottom: 1px solid #2e2e2e;\n  padding-top: 8px;\n  padding-bottom: 8px; }\n\n.item-container {\n  display: flex;\n  align-items: center;\n  padding-top: 4px;\n  padding-bottom: 4px; }\n  .item-container:hover {\n    cursor: pointer; }\n  .item-container p {\n    padding-left: 25px;\n    margin-bottom: 2px;\n    margin-top: 10px; }\n\n.item-header {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center; }\n  .item-header img {\n    width: 14px;\n    height: 14px;\n    padding-right: 5px; }\n  .item-header h5 {\n    font-family: 'Georgia', serif;\n    text-transform: uppercase;\n    margin: 0;\n    padding: 0;\n    font-weight: normal;\n    color: #2e2e2e;\n    font-size: 1rem; }\n\n.expanded.collapse {\n  visibility: hidden;\n  height: 0;\n  width: 0; }\n\n.expanded.expand {\n  visibility: visible;\n  height: 100%; }\n\n.expanded h5 {\n  padding-left: 5px; }\n\n.collapsed.collapse {\n  visibility: visible;\n  height: 100%; }\n\n.collapsed.expand {\n  visibility: hidden;\n  height: 0;\n  width: 0; }\n\n.footer {\n  height: 2rem;\n  background-color: #F1F1F1;\n  border-top: 1px solid #2e2e2e;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 0.6rem;\n  color: #2e2e2e;\n  font-family: 'Trebuchet MS', serif; }\n", ""]);
 
 // exports
 
@@ -19338,6 +19379,86 @@ module.exports = function (css) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "/dist/assets/logo.png";
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _arrowExpanded = __webpack_require__(47);
+
+var _arrowExpanded2 = _interopRequireDefault(_arrowExpanded);
+
+var _arrowCollapsed = __webpack_require__(46);
+
+var _arrowCollapsed2 = _interopRequireDefault(_arrowCollapsed);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ExpandCollapseItem = function ExpandCollapseItem(props) {
+	var collapseOrExpand = props.show ? 'expand' : 'collapse';
+	return _react2.default.createElement(
+		'div',
+		{ className: 'item-container', onClick: props.toggleItem },
+		_react2.default.createElement(
+			'div',
+			{ className: 'collapsed ' + collapseOrExpand, id: props.id },
+			_react2.default.createElement(
+				'div',
+				{ className: 'item-header' },
+				_react2.default.createElement('img', { src: _arrowCollapsed2.default }),
+				_react2.default.createElement(
+					'h5',
+					null,
+					'collapsed'
+				)
+			)
+		),
+		_react2.default.createElement(
+			'div',
+			{ className: 'expanded ' + collapseOrExpand, id: props.id },
+			_react2.default.createElement(
+				'div',
+				{ className: 'item-header' },
+				_react2.default.createElement('img', { src: _arrowExpanded2.default }),
+				_react2.default.createElement(
+					'h5',
+					null,
+					'Expanded'
+				)
+			),
+			_react2.default.createElement(
+				'p',
+				null,
+				'This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.'
+			)
+		)
+	);
+};
+
+exports.default = ExpandCollapseItem;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/dist/assets/arrow-collapsed.png";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/dist/assets/arrow-expanded.png";
 
 /***/ })
 /******/ ]);

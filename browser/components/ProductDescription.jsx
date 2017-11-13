@@ -17,9 +17,7 @@ const ProductDescription = (props) => {
 			</ul>
 			<h3>$19.95</h3>
 			<p>
-  			<input id="spinner" name="value" />
-  			<button>+</button>
-  			<button>-</button>
+  			<input id="qty" type="number" placeholder="1" min="1" max="99" defaultValue="1" />
 			</p>
 			<img className="add-to-cart" src={ AddToCart } />
 			<ExpandCollapseContainer />
