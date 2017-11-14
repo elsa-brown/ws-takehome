@@ -21,6 +21,7 @@ React, JavaScript/ES6, webpack, SCSS, babel, Express, HTML5/CSS3
  * Fix `file-loader` asset pre-processing flow. Currently some assets are compiled to a `dist > assets` folder, while others are not compiled. (This is due to different requirements for url interpolation in React components with dynamically generated elements.)
  * Test across browsers and devices. Current iteration has been tested on Chrome version 62.x on a 13" Macbook.
  * Install `postcss` / `autoprefixer` for improved cross-browser compatibility. 
+ * Install custom vendor fonts and update font rules.
  * Adapt UI for a mobile-friendly site. 
  
  #### File structure overview:
