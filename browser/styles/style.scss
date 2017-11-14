@@ -115,12 +115,16 @@ hr {
   	visibility: visible;
   	height: 200px;
   	width: 500px;
+  	opacity: 1;
+  	transition: opacity 0.2s;
   }
 
   &.hide {
   	visibility: hidden;
   	height: 0;
   	width: 0;
+  	opacity: 0;
+  	transition: opacity 0.2s;
   }
 
   h4 {
@@ -305,11 +309,15 @@ hr {
 		visibility: hidden;
 		height: 0;
 		width: 0;
+		opacity: 0;
+		transition: 0s;
 	}
 
 	&.expand {
 		visibility: visible;
 		height: 100%;
+		opacity: 1;
+		transition: height 0s, opacity 0.5s;
 	}
 
 	h5 {
@@ -321,12 +329,16 @@ hr {
 	&.collapse {
 		visibility: visible;
 		height: 100%;
+		opacity: 1;
+		transition: 0s;
 	}
 
 	&.expand {
 		visibility: hidden;
 		height: 0;
 		width: 0;
+		opacity: 0;
+		transition: 0s;
 	}
 }
 
