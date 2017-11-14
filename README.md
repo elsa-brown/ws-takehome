@@ -13,8 +13,8 @@ React, JavaScript/ES6, webpack, SCSS, babel, Express, HTML5/CSS3
 #### Features
 * Product hero image and name/color update based on user selection of thumbnail images.
 * Modal window opens on "Add to Cart", reflecting the product, quantity and subtotal being purchased by the user.
-* "Expanded" and "Collapse" sections are responsive with fluid animation
-* Thumbnail images optimized for cleaner design. 
+* "Expanded" and "Collapsed" sections are responsive with fluid animation.
+* Hero and Thumbnail images optimized for clean UI design. 
 
 #### TODO
  * Make qty input field auto-reset to 1 when product selection is updated. Currently the user has to manually reset to 1.
