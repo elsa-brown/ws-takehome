@@ -2,12 +2,15 @@
 Thank you for taking the time to review this submission.
 
 ## Instructions
-1. Install dependencies: `npm install`
-2. Run `npm run build` to compile
-3. Run `npm start` to start server
-4. Open `http://localhost:8080` to view
+1. Clone repository to local machine
+2. Install dependencies: `npm install`
+3. Run `npm run build` to compile
+4. Run `npm start` to start server
+5. Open `http://localhost:8080` to view
 
-#### Technologies used:
+## About
+
+#### Technologies used
 React, JavaScript/ES6, webpack, SCSS, babel, Express, HTML5/CSS3
 
 #### Features
@@ -24,7 +27,7 @@ React, JavaScript/ES6, webpack, SCSS, babel, Express, HTML5/CSS3
  * Install custom vendor fonts and update font rules.
  * Adapt UI for a mobile-friendly site. 
  
- #### File structure overview:
+ #### File structure overview
 ```
 ├── browser
 │   ├── components
