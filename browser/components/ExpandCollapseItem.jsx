@@ -4,7 +4,9 @@ import arrowExpanded from '../../public/assets/arrow-expanded.png';
 import arrowCollapsed from '../../public/assets/arrow-collapsed.png';
 
 const ExpandCollapseItem = (props) => {
-	let collapseOrExpand = props.show ? 'expand' : 'collapse';
+
+	let collapseOrExpand = (props.id === props.expandedItem) ? 'expand' : 'collapse';
+
 	return (
 		<div className="item-container" onClick={props.toggleItem}>
 			<div className={`collapsed ${collapseOrExpand}`} id={props.id}>

@@ -19,7 +19,7 @@ const ProductDescription = (props) => {
 			<p>
   			<input id="qty" type="number" placeholder="1" min="1" max="99" defaultValue="1" />
 			</p>
-			<img className="add-to-cart" src={ AddToCart } />
+			<img className="add-to-cart" src={AddToCart} onClick={props.toggleModal} />
 			<ExpandCollapseContainer />
 		</div>
 	)

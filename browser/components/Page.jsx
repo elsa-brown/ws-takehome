@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavBar from './NavBar';
-//import Breadcrumbs from './Breadcrumbs';
 import ProductContainer from './ProductContainer';
 import Footer from './Footer';
 
