@@ -18446,10 +18446,13 @@ var ProductContainer = function (_Component) {
 			color: 'French Blue',
 			hero: '/assets/product-large-a.jpg',
 			thumbnail: '/assets/product-small-a.jpg',
-			showModal: false
+			showModal: false,
+			price: 19.95,
+			qty: 1
 		};
 
 		_this.selectProduct = _this.selectProduct.bind(_this);
+		_this.toggleQty = _this.toggleQty.bind(_this);
 		_this.toggleModal = _this.toggleModal.bind(_this);
 		return _this;
 	}
@@ -18461,13 +18464,18 @@ var ProductContainer = function (_Component) {
 			this.setState({
 				color: selected.color,
 				hero: selected.hero,
-				thumbnail: selected.thumbnail
+				thumbnail: selected.thumbnail,
+				qty: 1
 			});
+		}
+	}, {
+		key: 'toggleQty',
+		value: function toggleQty(evt) {
+			this.setState({ qty: evt.target.value });
 		}
 	}, {
 		key: 'toggleModal',
 		value: function toggleModal() {
-			console.log('toggle Modal!');
 			var nextState = !this.state.showModal;
 			this.setState({ showModal: nextState });
 		}
@@ -18478,12 +18486,23 @@ var ProductContainer = function (_Component) {
 				'div',
 				null,
 				_react2.default.createElement(_Breadcrumbs2.default, { color: this.state.color }),
-				_react2.default.createElement(_Modal2.default, { thumbnail: this.state.thumbnail, toggleModal: this.toggleModal, showModal: this.state.showModal }),
+				_react2.default.createElement(_Modal2.default, {
+					thumbnail: this.state.thumbnail,
+					toggleModal: this.toggleModal,
+					showModal: this.state.showModal,
+					price: this.state.price,
+					qty: this.state.qty
+				}),
 				_react2.default.createElement(
 					'div',
 					{ className: 'product-details col-sm-12' },
 					_react2.default.createElement(_ProductImage2.default, { hero: this.state.hero, selectProduct: this.selectProduct }),
-					_react2.default.createElement(_ProductDescription2.default, { color: this.state.color, toggleModal: this.toggleModal })
+					_react2.default.createElement(_ProductDescription2.default, {
+						color: this.state.color,
+						toggleQty: this.toggleQty,
+						toggleModal: this.toggleModal,
+						qty: this.state.qty
+					})
 				)
 			);
 		}
@@ -18674,7 +18693,7 @@ var ProductDescription = function ProductDescription(props) {
 		_react2.default.createElement(
 			'p',
 			null,
-			_react2.default.createElement('input', { id: 'qty', type: 'number', placeholder: '1', min: '1', max: '99', defaultValue: '1' })
+			_react2.default.createElement('input', { id: 'qty', type: 'number', placeholder: '' + props.qty, min: '1', max: '99', defaultValue: '1', onChange: props.toggleQty })
 		),
 		_react2.default.createElement('img', { className: 'add-to-cart', src: _buttonAddToCart2.default, onClick: props.toggleModal }),
 		_react2.default.createElement(_ExpandCollapseContainer2.default, null)
@@ -19487,7 +19506,9 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Modal = function Modal(props) {
+
 	var showOrHide = props.showModal ? 'show' : 'hide';
+	var subtotal = parseFloat(props.qty * props.price).toFixed(2);
 
 	return _react2.default.createElement(
 		'div',
@@ -19525,12 +19546,14 @@ var Modal = function Modal(props) {
 					_react2.default.createElement(
 						'li',
 						null,
-						'Qty: 1'
+						'Qty: ',
+						props.qty
 					),
 					_react2.default.createElement(
 						'li',
 						null,
-						'Subtotal: $19.95'
+						'Subtotal: $',
+						subtotal
 					)
 				)
 			)

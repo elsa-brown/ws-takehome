@@ -14,10 +14,13 @@ export default class ProductContainer extends Component {
 			color: 'French Blue',
 			hero: '/assets/product-large-a.jpg',
 			thumbnail: '/assets/product-small-a.jpg',
-			showModal: false
+			showModal: false,
+			price: 19.95,
+			qty: 1
 		}
 
 		this.selectProduct = this.selectProduct.bind(this);
+		this.toggleQty = this.toggleQty.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
 	}
 
@@ -27,13 +30,17 @@ export default class ProductContainer extends Component {
 			{
 				color: selected.color, 
 				hero: selected.hero,
-				thumbnail: selected.thumbnail
+				thumbnail: selected.thumbnail,
+				qty: 1
 			}
 		)
 	}
 
+	toggleQty(evt) {
+		this.setState({qty: evt.target.value})
+	}
+ 
 	toggleModal() {
-		console.log('toggle Modal!')
 		let nextState = !this.state.showModal;
 		this.setState({showModal: nextState})
 	}
@@ -42,10 +49,21 @@ export default class ProductContainer extends Component {
 		return (
 			<div>
 				<Breadcrumbs color={this.state.color} />
-				<Modal thumbnail={this.state.thumbnail} toggleModal={this.toggleModal} showModal={this.state.showModal} />
+				<Modal 
+					thumbnail={this.state.thumbnail} 
+					toggleModal={this.toggleModal} 
+					showModal={this.state.showModal} 
+					price={this.state.price} 
+					qty={this.state.qty} 
+				/>
 				<div className="product-details col-sm-12">
 					<ProductImage hero={this.state.hero} selectProduct={this.selectProduct} />
-					<ProductDescription color={this.state.color} toggleModal={this.toggleModal} />
+					<ProductDescription 
+						color={this.state.color} 
+						toggleQty={this.toggleQty}
+						toggleModal={this.toggleModal} 
+						qty={this.state.qty}
+					/>
 				</div>
 			</div>
 		)

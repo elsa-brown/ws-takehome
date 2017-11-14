@@ -17,7 +17,7 @@ const ProductDescription = (props) => {
 			</ul>
 			<h3>$19.95</h3>
 			<p>
-  			<input id="qty" type="number" placeholder="1" min="1" max="99" defaultValue="1" />
+  			<input id="qty" type="number" placeholder={`${props.qty}`} min="1" max="99" defaultValue='1' onChange={props.toggleQty} />
 			</p>
 			<img className="add-to-cart" src={AddToCart} onClick={props.toggleModal} />
 			<ExpandCollapseContainer />

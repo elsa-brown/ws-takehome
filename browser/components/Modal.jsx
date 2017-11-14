@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Modal = (props) => {
+
 	let showOrHide = props.showModal ? 'show' : 'hide';
+	let subtotal = parseFloat(props.qty * props.price).toFixed(2);
 
 	return (
 		<div className={`modal ${showOrHide}`} onClick={props.toggleModal}>
@@ -15,8 +17,8 @@ const Modal = (props) => {
 				<div className="modal-product-details col-sm-8">
 					<ul>
 						<li id="modal-item-name">Williams Sonoma Classic Apron, French Blue</li>
-						<li>Qty: 1</li>
-						<li>Subtotal: $19.95</li>
+						<li>Qty: {props.qty}</li>
+						<li>Subtotal: ${subtotal}</li>
 					</ul>
 				</div>
 			</div>
