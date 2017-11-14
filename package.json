@@ -4,19 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server/index.js",
+    "start": "node ./server/index.js",
     "build": "webpack --config webpack.config.js",
     "build-watch": "npm run build -- -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elsa-brown/ws-takehome.git"
-  },
-  "author": "",
+  "author": "elsa",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elsa-brown/ws-takehome/issues"
-  },
   "homepage": "https://github.com/elsa-brown/ws-takehome#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",

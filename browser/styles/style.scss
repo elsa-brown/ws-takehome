@@ -2,8 +2,9 @@
 @import 'columns';
 @import 'colors';
 
+/* global styles */
 body {
-	font-family: 'Trebuchet MS';
+	font-family: 'Trebuchet MS', serif;
 }
 
 h3 {
@@ -40,6 +41,8 @@ hr {
 	max-width: 1000px;
 	margin: 0 auto;
 }
+
+/* header and nav bar styles */
 
 .header {
 	height: 6rem;
@@ -88,7 +91,7 @@ hr {
 	display: flex;
 	padding-left: 2px;
 	padding-bottom: 2px;
-	font-family: 'Trebuchet MS';
+	font-family: 'Trebuchet MS', serif;
 	font-size: 0.7rem;
 	color: $medium-gray;
 
@@ -100,6 +103,8 @@ hr {
 		color: $near-black;
 	}
 }
+
+/* modal styles */
 
 .modal {
 	box-sizing: border-box;
@@ -155,18 +160,6 @@ hr {
   ul {
   	padding: 0;
   }
-
-  button: {
-  	    margin-left: -1px;
-    margin-top: -50px;
-    /* padding: 2px; */
-    font-size: 0.7rem;
-    line-height: 1.2rem;
-    /* background-color: red; */
-    /* color: white; */
-    text-transform: uppercase;
-    /* border: none; */
-  }
 }
 
 #modal-item-name {
@@ -185,6 +178,8 @@ hr {
   	cursor: pointer;
   };
 }
+
+/* product styles */
 
 .product-details {
 	padding-bottom: 40px;
@@ -258,6 +253,8 @@ hr {
 		cursor: pointer;
 	}
 }
+
+/* expand collapse styles */
 
 .expand-collapse-container {
 	border-top: 1px solid $near-black;
@@ -341,6 +338,8 @@ hr {
 		transition: 0s;
 	}
 }
+
+/* footer styles */
 
 .footer {
 	width: 100%;
