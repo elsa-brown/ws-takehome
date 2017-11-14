@@ -16,7 +16,7 @@ const Modal = (props) => {
 				</div>
 				<div className="modal-product-details col-sm-8">
 					<ul>
-						<li id="modal-item-name">Williams Sonoma Classic Apron, French Blue</li>
+						<li id="modal-item-name">Williams-Sonoma Classic Apron, {props.color}</li>
 						<li>Qty: {props.qty}</li>
 						<li>Subtotal: ${subtotal}</li>
 					</ul>

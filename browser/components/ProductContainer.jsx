@@ -50,11 +50,12 @@ export default class ProductContainer extends Component {
 			<div>
 				<Breadcrumbs color={this.state.color} />
 				<Modal 
-					thumbnail={this.state.thumbnail} 
-					toggleModal={this.toggleModal} 
+					color={this.state.color}
+					thumbnail={this.state.thumbnail}  
 					showModal={this.state.showModal} 
 					price={this.state.price} 
 					qty={this.state.qty} 
+					toggleModal={this.toggleModal}
 				/>
 				<div className="product-details col-sm-12">
 					<ProductImage hero={this.state.hero} selectProduct={this.selectProduct} />
